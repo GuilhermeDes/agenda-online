@@ -1,0 +1,335 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Estilo da pagina*/
+body {
+  background-image: url(../img/bg.jpg);
+  font-family: "Poppins", sans-serif;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*Cabeçalho do usuario*/
+.head {
+  background-color: #0367a3;
+  border-bottom: 4px solid #034974;
+  color: white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+/*Configurações*/
+.config {
+  margin-left: 85%;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+}
+/*Nome do usuario*/
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+}
+/*Botão de saida*/
+.btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 23px;
+  margin: 15px;
+}
+/*Div do conteudo*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: transparent;
+  margin-top: 40px;
+}
+/*Barra de navegação*/
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: transparent;
+  color: black;
+  font-size: 15px;
+  width: 205px;
+  height: 30px;
+  margin-left: 8%;
+}
+/*Opção de navegação(Agenda)*/
+.agenda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-top: 3px solid #0367a3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 100px;
+}
+/*Opção de navegação(Historico)*/
+.historico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(185, 185, 185);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/*Dados*/
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+/*Div que realiza o agendamento*/
+.agendar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 20%;
+  height: 550px;
+  padding: 15px;
+  box-shadow: 1px 1px 5px white;
+}
+/*Div que tem o registro dos agendamentos*/
+.registro {
+  background-color: white;
+  width: 60%;
+  height: 550px;
+  border-radius: 4px;
+  padding: 15px;
+  margin-left: 5px;
+  box-shadow: 1px 1px 5px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*Titulo da agenda*/
+.titulo-agenda {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-top: 25px;
+}
+/*Formulario*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+}
+/*estilo dos inputs*/
+.evento-agendar,
+.data-agendar,
+.horas-agendar,
+.categoria-agendar {
+  color: rgb(118, 118, 118);
+  border-radius: 4px;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: whitesmoke;
+  border: none;
+  /* border: 2px solid gray;
+  background-color: white;*/
+}
+.descricao-agendar {
+  border-bottom: 1px solid gray;
+  color: rgb(118, 118, 118);
+  border-radius: 4px;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: whitesmoke;
+  border: none;
+  /* border: 2px solid gray;
+  background-color: white;*/
+}
+/*Organização dos inputs*/
+.evento,
+.data-time,
+.categoria,
+.descricao {
+  display: flex;
+  flex-direction: row;
+}
+/*Botões*/
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-save {
+  color: white;
+  background-color: darkgreen;
+  width: 40%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: 15px;
+}
+.btn-reset {
+  color: white;
+  background-color: dodgerblue;
+  width: 40%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: 15px;
+}
+/*Hovers, Active e Focus*/
+.agenda,
+.historico:hover {
+  cursor: pointer;
+}
+.btn-save:hover {
+  border-right: 3px solid rgb(5, 70, 5);
+  border-bottom: 3px solid rgb(5, 70, 5);
+  cursor: pointer;
+}
+.btn-reset:hover {
+  border-right: 3px solid rgb(11, 78, 146);
+  border-bottom: 3px solid rgb(11, 78, 146);
+  cursor: pointer;
+}
+.btn-logout:hover {
+  cursor: pointer;
+}
+.btn-save:active {
+  border: none;
+}
+.btn-reset:active {
+  border: none;
+}
+.agenda,
+.historico:active {
+  background-color: white;
+  border-top: 3px solid #0367a3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.evento-agendar:focus {
+  border: 2px solid gray;
+  background-color: white;
+}
+.data-agendar:focus {
+  border: 2px solid gray;
+  background-color: white;
+}
+.horas-agendar:focus {
+  border: 2px solid gray;
+  background-color: white;
+}
+.categoria-agendar:focus {
+  border: 2px solid gray;
+  background-color: white;
+}
+.descricao-agendar:focus {
+  border: 2px solid gray;
+  background-color: white;
+}
+/*Restirar o efeito do link*/
+a {
+  color: black;
+  text-decoration-color: black;
+  text-decoration: none;
+}
+/*Responsivo*/
+@media only screen and (max-device-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .config {
+    margin-left: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .agendar {
+    width: 350px;
+    margin-top: 395px;
+  }
+  .registro {
+    width: 350px;
+    margin-top: 5px;
+  }
+}
+
+.tabela {
+  border: 2px solid gray;
+  width: 90%;
+  height: 500px;
+}
+.info-block {
+  display: flex;
+  flex-direction: row;
+}
+.array {
+  display: flex;
+  flex-direction: row;
+}

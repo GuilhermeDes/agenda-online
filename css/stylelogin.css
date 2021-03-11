@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/bglogin.jpg);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 150px;
+  justify-content: center;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px white;
+  padding: 15px;
+}
+.container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+.logo {
+  width: 160px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.info {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+  border: none;
+  margin: 5px;
+  width: 250px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 13px;
+  color: rgb(118, 118, 118);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.acesso {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.btn {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: rgb(12, 107, 202);
+  color: white;
+  outline: none;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.info:focus {
+  background-color: white;
+  border: 2px solid rgb(31, 31, 31);
+}
+
+.link {
+  color: rgb(150, 150, 150);
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.help {
+  margin-top: 35px;
+}
+
+/*Hover*/
+.btn:hover {
+  border-bottom: 4px solid rgb(37, 37, 196);
+  border-right: 3px solid rgb(37, 37, 196);
+  cursor: pointer;
+}
+.link:hover {
+  color: rgb(117, 117, 117);
+}
+/*Active*/
+.btn:active {
+  border: none;
+  cursor: pointer;
+}
+/*Remover o efeito de link*/
+a:link {
+  text-decoration: none;
+}
+/*Responsivo*/
+@media only screen and (max-device-width: 900px) {
+  .container {
+    width: 300px;
+    height: 500px;
+    margin: 20px;
+  }
+  .container h1 {
+      font-size: 20px;
+  }
+}

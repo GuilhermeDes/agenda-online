@@ -1,0 +1,171 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Estilo da pagina*/
+body {
+  background-image: url(../img/bg.jpg);
+  font-family: "Poppins", sans-serif;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*Cabeçalho do usuario*/
+.head {
+  background-color: #0367a3;
+  border-bottom: 4px solid #034974;
+  color: white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+/*Configurações*/
+.config {
+  margin-left: 85%;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+}
+/*Nome do usuario*/
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+}
+/*Botão de saida*/
+.btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 23px;
+  margin: 15px;
+}
+/*Div do conteudo*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: transparent;
+  margin-top: 40px;
+}
+/*Barra de navegação*/
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: transparent;
+  color: black;
+  font-size: 15px;
+  width: 205px;
+  height: 30px;
+  margin-left: 9%;
+}
+/*Opção de navegação(Agenda)*/
+.agenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(185, 185, 185);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+/*Opção de navegação(Historico)*/
+.historico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-top: 3px solid #0367a3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 100px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    height: 550px;
+    padding: 15px;
+    box-shadow: 1px 1px 5px white;
+}
+/*Hovers, Active e Focus*/
+.agenda,
+.historico:hover {
+  cursor: pointer;
+}
+.agenda:active {
+  background-color: white;
+  border-top: 3px solid #0367a3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/*Restirar o efeito do link*/
+a {
+    color: black;
+    text-decoration-color: black;
+    text-decoration: none;
+  }
+  /*Responsivo*/
+@media only screen and (max-device-width: 900px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .head {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .config {
+      margin-left: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .all {
+      width: 350px;
+    }
+  }
