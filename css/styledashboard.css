@@ -5,6 +5,7 @@
 }
 /*Estilo da pagina*/
 body {
+  overflow: hidden;
   background-image: url(../img/bg.jpg);
   font-family: "Poppins", sans-serif;
   background-attachment: fixed;
@@ -15,17 +16,17 @@ body {
 }
 /*Cabeçalho do usuario*/
 .head {
-  background-color: #0367a3;
-  border-bottom: 4px solid #034974;
+  background-color: #009879;
+  border-bottom: 4px solid #057760;
   color: white;
   width: 100%;
   height: 40px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
 }
 /*Configurações*/
 .config {
-  margin-left: 85%;
   display: flex;
   justify-content: center;
   width: 300px;
@@ -80,7 +81,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  border-top: 3px solid #0367a3;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   text-align: center;
@@ -142,6 +142,7 @@ body {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   margin-top: 25px;
+  margin-left: 10px;
 }
 /*Formulario*/
 .formulario {
@@ -166,10 +167,8 @@ body {
   font-size: 15px;
   margin: 5px;
   font-weight: bold;
-  background-color: whitesmoke;
-  border: none;
-  /* border: 2px solid gray;
-  background-color: white;*/
+  border: 2px solid gray;
+  background-color: white;
 }
 .descricao-agendar {
   border-bottom: 1px solid gray;
@@ -177,17 +176,15 @@ body {
   border-radius: 4px;
   min-height: 100px;
   max-height: 100px;
-  min-width: 100%;
+  min-width: 94%;
   max-width: 100%;
   text-align: center;
   outline: none;
   font-size: 15px;
   margin: 5px;
   font-weight: bold;
-  background-color: whitesmoke;
-  border: none;
-  /* border: 2px solid gray;
-  background-color: white;*/
+  border: 2px solid gray;
+  background-color: white;
 }
 /*Organização dos inputs*/
 .evento,
@@ -205,7 +202,7 @@ body {
 }
 .btn-save {
   color: white;
-  background-color: darkgreen;
+  background-color: forestgreen;
   width: 40%;
   height: 45px;
   outline: none;
@@ -225,23 +222,113 @@ body {
   margin: 5px;
   font-size: 15px;
 }
+/*Tabela*/
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/*Definindo o tamanho maximo de vizualização da tabela*/
+.tabela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 920px;
+  min-height: 530px;
+  max-height: 530px;
+  padding: 3px;
+  overflow: scroll;
+  overflow: auto;
+  background-color: transparent;
+}
+/*Cabeçalho da tabela*/
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+/*Espaçamento dos dados*/
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+/*borda do fundo*/
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+/*Linha da cor cinza*/
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+/*Borda do ultimo dado*/
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+/*Botões da tabela*/
+.btn-check {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: forestgreen;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.btn-edit {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: goldenrod;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.btn-del {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: darkred;
+  border-radius: 4px;
+  font-size: 15px;
+}
 /*Hovers, Active e Focus*/
 .agenda,
 .historico:hover {
   cursor: pointer;
 }
 .btn-save:hover {
-  border-right: 3px solid rgb(5, 70, 5);
   border-bottom: 3px solid rgb(5, 70, 5);
   cursor: pointer;
 }
 .btn-reset:hover {
-  border-right: 3px solid rgb(11, 78, 146);
   border-bottom: 3px solid rgb(11, 78, 146);
   cursor: pointer;
 }
 .btn-logout:hover {
   cursor: pointer;
+  color: #057760;
+}
+.content-table tbody tr:hover {
+  font-weight: bold;
+  color: #009879;
+}
+.btn-check:hover {
+  background-color: rgb(14, 95, 14);
+}
+.btn-edit:hover {
+  background-color: rgb(161, 119, 11);
+}
+.btn-del:hover {
+  background-color: rgb(100, 7, 7);
 }
 .btn-save:active {
   border: none;
@@ -252,29 +339,9 @@ body {
 .agenda,
 .historico:active {
   background-color: white;
-  border-top: 3px solid #0367a3;
+  border-top: 3px solid #057760;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-}
-.evento-agendar:focus {
-  border: 2px solid gray;
-  background-color: white;
-}
-.data-agendar:focus {
-  border: 2px solid gray;
-  background-color: white;
-}
-.horas-agendar:focus {
-  border: 2px solid gray;
-  background-color: white;
-}
-.categoria-agendar:focus {
-  border: 2px solid gray;
-  background-color: white;
-}
-.descricao-agendar:focus {
-  border: 2px solid gray;
-  background-color: white;
 }
 /*Restirar o efeito do link*/
 a {
@@ -320,16 +387,109 @@ a {
   }
 }
 
-.tabela {
-  border: 2px solid gray;
-  width: 90%;
-  height: 500px;
+/*ScrollBar*/
+
+::-webkit-scrollbar {
+  width: 3px;
 }
-.info-block {
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #009879;
+}
+/*POPUP*/
+.popup {
+  width: 100%;
+  height: 20%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
 }
-.array {
+/*Estilo de todos os popups*/
+.popup-save {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
   display: flex;
-  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-check {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-edit {
+  background-color: rgba(221, 199, 0, 0.5);
+  color: rgb(161, 119, 11);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-del {
+  background-color: rgba(173, 24, 24, 0.5);
+  color: rgb(173, 24, 24);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+/*Efeito de expansão*/
+@keyframes scale {
+  0% {
+    transform: scale(0.0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -26,8 +26,12 @@
     </section>
     <section class="container">
         <nav class="navbar">
-            <a href="dashboard.html"><div class="agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agenda</div></a>
-            <a href="historico.html"><div class="historico"><i class="fas fa-history" style="margin-right: 5px;"></i>Historico</div></a>
+            <a href="dashboard.html">
+                <div class="agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agenda</div>
+            </a>
+            <a href="historico.html">
+                <div class="historico"><i class="fas fa-history" style="margin-right: 5px;"></i>Historico</div>
+            </a>
         </nav>
         <section class="main">
             <div class="agendar">
@@ -53,31 +57,220 @@
                     <button type="reset" class="btn-reset"><i class="fas fa-trash-restore"
                             style="margin-right: 5px;"></i>LIMPAR</button>
                 </div>
+                <section class="popup">
+                    <div class="popup-save">Evento foi adicionado!</div>
+                    <div class="popup-check">Evento foi concluido!</div>
+                    <div class="popup-edit">As alterações foram salvas!</div>
+                    <div class="popup-del">Evento foi excluido!</div>
+                </section>
             </div>
             <div class="registro">
-                <div class="tabela"> <div class="info-block">
-                    <div class="evento-tabela">Evento</div>
-                    <div class="data-tabela">Data</div>
-                    <div class="horas-tabela">Horario</div>
-                    <div class="evento-tabela">Desc.</div>
-                    <div class="evento-tabela">Categoria</div>
-                    <div class="evento-tabela">Ações</div>
-                </div>
-                    <div class="array">
-                        <div class="evento-tabela">Visita</div>
-                        <div class="data-tabela">15/01/2021/</div>
-                        <div class="horas-tabela">15:00</div>
-                        <div class="evento-tabela">Levar Pendrive</div>
-                        <div class="evento-tabela">Serviço</div>
-                        <div class="evento-tabela"><button class="btn-check"><i
-                                    class="fas fa-check"></i></button><button class="btn-edit"><i
-                                    class="far fa-edit"></i></button><button class="btn-dell"><i
-                                    class="far fa-trash-alt"></i></button></div>
-                    </div>
-                </div>
+                <section class="tabela">
+                    <!--Tabela de dados-->
+                    <table class="content-table">
+                        <!--Cabeçalho da tabela-->
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Evento</th>
+                                <th>Data</th>
+                                <th>Horario</th>
+                                <th>Descrição</th>
+                                <th>Categoria</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <!--Dados da tabela-->
+                        <tbody>
+                            <!--Dados da tabela-->
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--Inicio dos dados que pode ser apagados-->
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Aniversario</td>
+                                <td>11/03/2021</td>
+                                <td>15:00</td>
+                                <td>Comprar presente</td>
+                                <td>Festa</td>
+                                <td>
+                                    <div class="btn-table">
+                                        <button class="btn-check"><i class="far fa-check-circle"></i></button>
+                                        <button class="btn-edit"><i class="far fa-edit"></i></button>
+                                        <button class="btn-del"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--Fim dos dados que pode ser apagados-->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
             </div>
         </section>
     </section>
 </body>
-
 </html>
