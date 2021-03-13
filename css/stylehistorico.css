@@ -5,19 +5,37 @@
 }
 /*Estilo da pagina*/
 body {
-  background-image: url(../img/bg.jpg);
   font-family: "Poppins", sans-serif;
-  background-attachment: fixed;
+}
+/*Estilo da pagina*/
+.bg {
+  display: flex;
+  background-color: #03917538;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.imagem-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../img/bg-1.svg);
   position: relative;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -1;
 }
 /*Cabeçalho do usuario*/
 .head {
-  background-color: #009879;
-  border-bottom: 4px solid #057760;
-  color: white;
+  background-color: transparent;
+  color: #035e4b;
   width: 100%;
   height: 40px;
   display: flex;
@@ -28,11 +46,19 @@ body {
 .config {
   display: flex;
   justify-content: center;
-  width: 300px;
+  align-items: center;
+  width: 450px;
   height: 40px;
+  margin-top: 10px;
+}
+.msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
 }
 /*Nome do usuario*/
-
 .usuario {
   display: flex;
   align-items: center;
@@ -40,6 +66,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 5px;
+  font-weight: 600;
 }
 /*Botão de saida*/
 .btn-logout {
@@ -50,8 +77,12 @@ body {
   color: white;
   outline: none;
   border: none;
-  font-size: 23px;
+  font-size: 20px;
   margin: 15px;
+  background-color: #035e4b;
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
 }
 /*Div do conteudo*/
 .container {
@@ -128,7 +159,9 @@ body {
 }
 .btn-logout:hover {
   cursor: pointer;
-  color: #057760;
+  color: #035e4b;
+  background-color: transparent;
+  border: 2px solid #035e4b;
 }
 .agenda:active {
   background-color: white;
@@ -174,3 +207,71 @@ a {
       width: 350px;
     }
   }
+  /*ScrollBar*/
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #009879;
+}
+
+
+/*Tabela*/
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/*Definindo o tamanho maximo de vizualização da tabela*/
+.tabela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 920px;
+  min-height: 530px;
+  max-height: 530px;
+  padding: 3px;
+  overflow: scroll;
+  overflow: auto;
+  background-color: transparent;
+}
+/*Cabeçalho da tabela*/
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+/*Espaçamento dos dados*/
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+/*borda do fundo*/
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+/*Linha da cor cinza*/
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+/*Borda do ultimo dado*/
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.content-table tbody tr:hover {
+  font-weight: bold;
+  color: #009879;
+}
+.registro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

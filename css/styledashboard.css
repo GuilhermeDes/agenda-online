@@ -3,22 +3,38 @@
   margin: 0;
   padding: 0;
 }
-/*Estilo da pagina*/
 body {
-  overflow: hidden;
-  background-image: url(../img/bg.jpg);
   font-family: "Poppins", sans-serif;
-  background-attachment: fixed;
+}
+/*Estilo da pagina*/
+.bg {
+  display: flex;
+  background-color: #03917538;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.imagem-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../img/bg-1.svg);
   position: relative;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -1;
 }
 /*Cabeçalho do usuario*/
 .head {
-  background-color: #009879;
-  border-bottom: 4px solid #057760;
-  color: white;
+  background-color: transparent;
+  color: #035e4b;
   width: 100%;
   height: 40px;
   display: flex;
@@ -29,8 +45,17 @@ body {
 .config {
   display: flex;
   justify-content: center;
-  width: 300px;
+  align-items: center;
+  width: 450px;
   height: 40px;
+  margin-top: 10px;
+}
+.msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
 }
 /*Nome do usuario*/
 .usuario {
@@ -40,6 +65,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 5px;
+  font-weight: 600;
 }
 /*Botão de saida*/
 .btn-logout {
@@ -50,8 +76,12 @@ body {
   color: white;
   outline: none;
   border: none;
-  font-size: 23px;
+  font-size: 20px;
   margin: 15px;
+  background-color: #035e4b;
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
 }
 /*Div do conteudo*/
 .container {
@@ -306,16 +336,18 @@ body {
   cursor: pointer;
 }
 .btn-save:hover {
-  border-bottom: 3px solid rgb(5, 70, 5);
+  border-bottom: 4px solid rgb(5, 70, 5);
   cursor: pointer;
 }
 .btn-reset:hover {
-  border-bottom: 3px solid rgb(11, 78, 146);
+  border-bottom: 4px solid rgb(11, 78, 146);
   cursor: pointer;
 }
 .btn-logout:hover {
   cursor: pointer;
-  color: #057760;
+  color: #035e4b;
+  background-color: transparent;
+  border: 2px solid #035e4b;
 }
 .content-table tbody tr:hover {
   font-weight: bold;
@@ -329,6 +361,19 @@ body {
 }
 .btn-del:hover {
   background-color: rgb(100, 7, 7);
+}
+.credito:hover {
+  color: #039175;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.closed:hover {
+  color: #454545;
 }
 .btn-save:active {
   border: none;
@@ -351,23 +396,71 @@ a {
 }
 /*Responsivo*/
 @media only screen and (max-device-width: 900px) {
-  body {
+  .head {
+    background-color: #035e4b;
+    color: white;
+    width: 100%;
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    margin-bottom: 40%;
   }
-  .head {
+  /*Configurações*/
+  .config {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
   }
-  .config {
-    margin-left: 0;
+  .msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  /*Nome do usuario*/
+  .usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 5px;
+    font-weight: 600;
+  }
+  /*Botão de saida*/
+  .btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin: 15px;
+    background-color: #035e4b;
+    width: 90px;
+    height: 35px;
+    border-radius: 4px;
   }
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -385,21 +478,35 @@ a {
     width: 350px;
     margin-top: 5px;
   }
+  .tabela {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+  }
+  .content-table {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+ 
+  }
+  .btn-logout:hover {
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+  }
 }
-
 /*ScrollBar*/
-
 ::-webkit-scrollbar {
   width: 3px;
 }
-
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #009879;
 }
 /*POPUP*/
-.popup {
+.avisos {
   width: 100%;
   height: 20%;
   display: flex;
@@ -460,7 +567,7 @@ a {
 /*Efeito de expansão*/
 @keyframes scale {
   0% {
-    transform: scale(0.0);
+    transform: scale(0);
   }
   10% {
     transform: scale(0.1);
@@ -492,4 +599,65 @@ a {
   100% {
     transform: scale(1);
   }
+}
+/*Credito*/
+.credito {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/*popup de agradecimento*/
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  text-align: center;
+  box-shadow: 1px 1px 5px white;
+  z-index: +2;
+  display: none;
+  animation: scale 1s linear;
+}
+.popup p {
+  color: #454545;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.closed {
+  color: #adadad;
+  font-size: 20px;
+  margin-left: 280px;
+  margin-top: 1px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.opaco {
+  position: center;
+  background-color: #03917590;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.3;
+  display: none;
 }

@@ -18,10 +18,16 @@
 </head>
 
 <body>
+    <!--Valores do Backgrounds-->
+    <section class="bg">
+        <div class="imagem-bg"></div>
+    </section>
+    <!--Conteudos-->
     <section class="head">
         <div class="config">
+            <div class="msg">Bem-Vindo</div>
             <div class="usuario">Guilherme Araujo</div>
-            <button class="btn-logout"><i class="fas fa-sign-out-alt"></i></button>
+            <button class="btn-logout"><i class="fas fa-sign-out-alt"></i>Sair</button>
         </div>
     </section>
     <section class="container">
@@ -45,7 +51,7 @@
                         <input type="time" class="horas-agendar" placeholder="00:00">
                     </div>
                     <div class="categoria">
-                        <input type="text" class="categoria-agendar" placeholder="Serviço">
+                        <input type="text" class="categoria-agendar" placeholder="Categoria...">
                     </div>
                     <div class="descricao">
                         <textarea class="descricao-agendar" placeholder="Descrição..."></textarea>
@@ -57,7 +63,7 @@
                     <button type="reset" class="btn-reset"><i class="fas fa-trash-restore"
                             style="margin-right: 5px;"></i>LIMPAR</button>
                 </div>
-                <section class="popup">
+                <section class="avisos">
                     <div class="popup-save">Evento foi adicionado!</div>
                     <div class="popup-check">Evento foi concluido!</div>
                     <div class="popup-edit">As alterações foram salvas!</div>
@@ -267,10 +273,39 @@
                             <!--Fim dos dados que pode ser apagados-->
                         </tbody>
                     </table>
+
                 </section>
+
             </div>
             </div>
         </section>
+        <!--creditos-->
+        <a onclick="abrir()">
+            <p class="credito">Creditos - Click Aqui</p>
+        </a>
     </section>
+    <!--Estrutura do pop-->
+    <div class="pop">
+        <div id="popup" class="popup">
+            <button class="closed" onclick="fechar()"><i class="fas fa-times"></i></button>
+            <img src="img/logo.png" style="width: 150px; height: 150px;">
+            <h1>Obrigado!</h1>
+            <p>A nossa equipe agradece a sua visita.</p>
+            <p style="margin-top: 10px;">Alunos: André, Guilherme, Isabelly, Janismar e Miguel.</p>
+            <p style="margin-top: 10px;">Projeto desenvolvido em PHP, CSS Puro, Laravel(Back-End).</p>
+        </div>
+        <div class="opaco" id="pop"></div>
 </body>
+<script>
+    /*Script POP*/
+    function abrir() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('pop').style.display = 'block';
+    }
+    function fechar() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('pop').style.display = 'none';
+    }
+</script>
+
 </html>

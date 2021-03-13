@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-image: url(../img/bglogin.jpg);
   display: flex;
@@ -12,7 +11,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -63,34 +61,29 @@ body {
   width: 200px;
   height: 50px;
   border: none;
-  background-color: rgb(12, 107, 202);
+  background-color: #009879;
   color: white;
   outline: none;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
-
 .info:focus {
   background-color: white;
   border: 2px solid rgb(31, 31, 31);
 }
-
 .link {
   color: rgb(150, 150, 150);
   font-weight: 600;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
-
 .help {
   margin-top: 35px;
 }
-
 /*Hover*/
 .btn:hover {
-  border-bottom: 4px solid rgb(37, 37, 196);
-  border-right: 3px solid rgb(37, 37, 196);
+  border-bottom: 4px solid #046e59;
   cursor: pointer;
 }
 .link:hover {
