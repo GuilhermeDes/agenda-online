@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  opacity: 0.9;
 }
 /*Cabeçalho do usuario*/
 .head {
@@ -197,24 +198,24 @@ body {
   font-size: 15px;
   margin: 5px;
   font-weight: bold;
-  border: 2px solid gray;
   background-color: white;
+  border: 2px solid rgb(206, 206, 206);
 }
 .descricao-agendar {
-  border-bottom: 1px solid gray;
   color: rgb(118, 118, 118);
   border-radius: 4px;
   min-height: 100px;
   max-height: 100px;
-  min-width: 94%;
+  min-width: 96%;
   max-width: 100%;
   text-align: center;
   outline: none;
   font-size: 15px;
   margin: 5px;
   font-weight: bold;
-  border: 2px solid gray;
+ 
   background-color: white;
+  border: 2px solid rgb(206, 206, 206);
 }
 /*Organização dos inputs*/
 .evento,
@@ -372,6 +373,7 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+
 .closed:hover {
   color: #454545;
 }
@@ -393,107 +395,6 @@ a {
   color: black;
   text-decoration-color: black;
   text-decoration: none;
-}
-/*Responsivo*/
-@media only screen and (max-device-width: 900px) {
-  .head {
-    color: white;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-size: 15px;
-    margin-bottom: 40%;
-  }
-  /*Configurações*/
-  .config {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    margin-top: 10px;
-  }
-  .msg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  /*Nome do usuario*/
-  .usuario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 400;
-    margin: 5px;
-    font-weight: 600;
-  }
-  /*Botão de saida*/
-  .btn-logout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    border: none;
-    font-size: 20px;
-    margin: 15px;
-    background-color: #035e4b;
-    width: 90px;
-    height: 35px;
-    border-radius: 4px;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .agendar {
-    width: 350px;
-    margin-top: 395px;
-  }
-  .registro {
-    width: 350px;
-    margin-top: 5px;
-  }
-  .tabela {
-    max-width: 350px;
-    min-height: 530px;
-    max-height: 530px;
-  }
-  .content-table {
-    max-width: 350px;
-    min-height: 530px;
-    max-height: 530px;
- 
-  }
-  .btn-logout:hover {
-    cursor: pointer;
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-  }
 }
 /*ScrollBar*/
 ::-webkit-scrollbar {
@@ -659,4 +560,78 @@ a {
   z-index: 1;
   opacity: 0.3;
   display: none;
+}
+.head-screen {
+  display: none;
+}
+/*Responsivo*/
+@media only screen and (max-device-width: 900px) {
+  .head-screen {
+background-color: #035e4b;
+color: white;
+width: 100%;
+height: 30%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px;
+  }
+
+  .head-screen i {
+   margin: 10px;
+   font-size: 30px;
+  }
+  .head{
+display: none;
+  }
+  /*Configurações*/
+  .config {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 1px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .agendar {
+    width: 350px;
+    margin-top: 395px;
+    display: none;
+  }
+  .agenda {
+    display: none;
+  }
+  .historico {
+    display: none;
+  }
+  .registro {
+    width: 350px;
+    margin-top: 5px;
+  }
+  .tabela {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+  }
+  .content-table {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+ 
+  }
 }
