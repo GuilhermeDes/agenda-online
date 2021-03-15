@@ -1,4 +1,6 @@
-/*Reset*/
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,22 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-/*Estilo da pagina*/
+a {
+  color: black;
+  text-decoration-color: black;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #009879;
+}
+/* ---------------------------------------*/
+/* ---------->>> BACKGROUND <<<-----------*/
+/* ---------------------------------------*/
 .bg {
   display: flex;
   background-color: #03917538;
@@ -32,7 +49,9 @@ body {
   z-index: -1;
   opacity: 0.9;
 }
-/*Cabeçalho do usuario*/
+/* --------------------------------------------*/
+/* ---------->>> BEM VINDO, SAIR <<<-----------*/
+/* --------------------------------------------*/
 .head {
   background-color: transparent;
   color: #035e4b;
@@ -42,7 +61,6 @@ body {
   flex-direction: row;
   justify-content: flex-end;
 }
-/*Configurações*/
 .config {
   display: flex;
   justify-content: center;
@@ -58,7 +76,6 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
-/*Nome do usuario*/
 .usuario {
   display: flex;
   align-items: center;
@@ -68,7 +85,6 @@ body {
   margin: 5px;
   font-weight: 600;
 }
-/*Botão de saida*/
 .btn-logout {
   display: flex;
   align-items: center;
@@ -84,7 +100,15 @@ body {
   height: 35px;
   border-radius: 4px;
 }
-/*Div do conteudo*/
+.btn-logout:hover {
+  cursor: pointer;
+  color: #035e4b;
+  background-color: transparent;
+  border: 2px solid #035e4b;
+}
+/* ----------------------------------------------*/
+/* ---------->>> DIVISÃO PRINCIPAL <<<-----------*/
+/* ----------------------------------------------*/
 .container {
   display: flex;
   flex-direction: column;
@@ -94,7 +118,9 @@ body {
   background-color: transparent;
   margin-top: 40px;
 }
-/*Barra de navegação*/
+/* --------------------------------------------------------*/
+/* ---------->>> NAVBAR(AGENDAR E HISTORICO) <<<-----------*/
+/* --------------------------------------------------------*/
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,7 +132,6 @@ body {
   height: 30px;
   margin-left: 8%;
 }
-/*Opção de navegação(Agenda)*/
 .agenda {
   display: flex;
   justify-content: center;
@@ -120,7 +145,6 @@ body {
   height: 30px;
   width: 100px;
 }
-/*Opção de navegação(Historico)*/
 .historico {
   display: flex;
   justify-content: center;
@@ -135,7 +159,9 @@ body {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/*Dados*/
+/* ------------------------------------------------------------------------*/
+/* ----------->>> DIVISÃO DO CONTEUDO(AGENDAR E REGISTRO) <<<--------------*/
+/* ------------------------------------------------------------------------*/
 .main {
   display: flex;
   flex-direction: row;
@@ -143,7 +169,6 @@ body {
   width: 100%;
   height: 600px;
 }
-/*Div que realiza o agendamento*/
 .agendar {
   display: flex;
   flex-direction: column;
@@ -153,7 +178,6 @@ body {
   padding: 15px;
   box-shadow: 1px 1px 5px white;
 }
-/*Div que tem o registro dos agendamentos*/
 .registro {
   background-color: white;
   width: 60%;
@@ -167,7 +191,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-/*Titulo da agenda*/
+/* ------------------------------------------------------------------------*/
+/* ---------->>> TITULO, FORMULARIO, BOTÕES(SALVAR E LIMPAR) <<<-----------*/
+/* ------------------------------------------------------------------------*/
 .titulo-agenda {
   font-size: 25px;
   font-weight: 400;
@@ -175,7 +201,6 @@ body {
   margin-top: 25px;
   margin-left: 10px;
 }
-/*Formulario*/
 .formulario {
   display: flex;
   flex-direction: column;
@@ -184,7 +209,6 @@ body {
   height: 300px;
   margin-top: 10px;
 }
-/*estilo dos inputs*/
 .evento-agendar,
 .data-agendar,
 .horas-agendar,
@@ -213,11 +237,9 @@ body {
   font-size: 15px;
   margin: 5px;
   font-weight: bold;
- 
   background-color: white;
   border: 2px solid rgb(206, 206, 206);
 }
-/*Organização dos inputs*/
 .evento,
 .data-time,
 .categoria,
@@ -225,7 +247,6 @@ body {
   display: flex;
   flex-direction: row;
 }
-/*Botões*/
 .btn {
   display: flex;
   flex-direction: row;
@@ -253,7 +274,34 @@ body {
   margin: 5px;
   font-size: 15px;
 }
-/*Tabela*/
+.agenda,
+.historico:hover {
+  cursor: pointer;
+}
+.btn-save:hover {
+  border-bottom: 4px solid rgb(5, 70, 5);
+  cursor: pointer;
+}
+.btn-reset:hover {
+  border-bottom: 4px solid rgb(11, 78, 146);
+  cursor: pointer;
+}
+.btn-save:active {
+  border: none;
+}
+.btn-reset:active {
+  border: none;
+}
+.agenda,
+.historico:active {
+  background-color: white;
+  border-top: 3px solid #057760;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* --------------------------------------------------------------------*/
+/* ------------------------>>> TABELA DE DADOS <<<---------------------*/
+/* --------------------------------------------------------------------*/
 .content-table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -262,7 +310,6 @@ body {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-/*Definindo o tamanho maximo de vizualização da tabela*/
 .tabela {
   display: flex;
   flex-direction: column;
@@ -275,32 +322,26 @@ body {
   overflow: auto;
   background-color: transparent;
 }
-/*Cabeçalho da tabela*/
 .content-table thead tr {
   background-color: #009879;
   color: #ffffff;
   text-align: center;
   font-weight: bold;
 }
-/*Espaçamento dos dados*/
 .content-table th,
 .content-table td {
   padding: 12px 15px;
   text-align: center;
 }
-/*borda do fundo*/
 .content-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
-/*Linha da cor cinza*/
 .content-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-/*Borda do ultimo dado*/
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
-/*Botões da tabela*/
 .btn-check {
   outline: none;
   border: none;
@@ -331,25 +372,6 @@ body {
   border-radius: 4px;
   font-size: 15px;
 }
-/*Hovers, Active e Focus*/
-.agenda,
-.historico:hover {
-  cursor: pointer;
-}
-.btn-save:hover {
-  border-bottom: 4px solid rgb(5, 70, 5);
-  cursor: pointer;
-}
-.btn-reset:hover {
-  border-bottom: 4px solid rgb(11, 78, 146);
-  cursor: pointer;
-}
-.btn-logout:hover {
-  cursor: pointer;
-  color: #035e4b;
-  background-color: transparent;
-  border: 2px solid #035e4b;
-}
 .content-table tbody tr:hover {
   font-weight: bold;
   color: #009879;
@@ -363,144 +385,9 @@ body {
 .btn-del:hover {
   background-color: rgb(100, 7, 7);
 }
-.credito:hover {
-  color: #039175;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.closed:hover {
-  color: #454545;
-}
-.btn-save:active {
-  border: none;
-}
-.btn-reset:active {
-  border: none;
-}
-.agenda,
-.historico:active {
-  background-color: white;
-  border-top: 3px solid #057760;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-/*Restirar o efeito do link*/
-a {
-  color: black;
-  text-decoration-color: black;
-  text-decoration: none;
-}
-/*ScrollBar*/
-::-webkit-scrollbar {
-  width: 3px;
-}
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #009879;
-}
-/*POPUP*/
-.avisos {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 30px;
-  text-align: center;
-}
-/*Estilo de todos os popups*/
-.popup-save {
-  background-color: rgba(14, 189, 23, 0.5);
-  color: darkolivegreen;
-  border-radius: 4px;
-  width: 70%;
-  height: 50%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  animation: scale 0.7s linear;
-}
-.popup-check {
-  background-color: rgba(14, 189, 23, 0.5);
-  color: darkolivegreen;
-  border-radius: 4px;
-  width: 70%;
-  height: 50%;
-  display: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  animation: scale 0.7s linear;
-}
-.popup-edit {
-  background-color: rgba(221, 199, 0, 0.5);
-  color: rgb(161, 119, 11);
-  border-radius: 4px;
-  width: 70%;
-  height: 50%;
-  display: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  animation: scale 0.7s linear;
-}
-.popup-del {
-  background-color: rgba(173, 24, 24, 0.5);
-  color: rgb(173, 24, 24);
-  border-radius: 4px;
-  width: 70%;
-  height: 50%;
-  display: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  animation: scale 0.7s linear;
-}
-/*Efeito de expansão*/
-@keyframes scale {
-  0% {
-    transform: scale(0);
-  }
-  10% {
-    transform: scale(0.1);
-  }
-  20% {
-    transform: scale(0.2);
-  }
-  30% {
-    transform: scale(0.3);
-  }
-  40% {
-    transform: scale(0.4);
-  }
-  50% {
-    transform: scale(0.5);
-  }
-  60% {
-    transform: scale(0.6);
-  }
-  70% {
-    transform: scale(0.7);
-  }
-  80% {
-    transform: scale(0.8);
-  }
-  90% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-/*Credito*/
+/* --------------------------------------------------------------------*/
+/* ---------------------------->>> CREDITOS <<<------------------------*/
+/* --------------------------------------------------------------------*/
 .credito {
   color: white;
   font-size: 15px;
@@ -510,7 +397,6 @@ a {
   margin-top: 25px;
   font-weight: 600;
 }
-/*popup de agradecimento*/
 .popup {
   position: fixed;
   top: 0;
@@ -561,40 +447,210 @@ a {
   opacity: 0.3;
   display: none;
 }
+.credito:hover {
+  color: #039175;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.closed:hover {
+  color: #454545;
+}
+/* --------------------------------------------------------------------*/
+/* ------------------------>>> AVISOS DAS AÇÕES <<<--------------------*/
+/* --------------------------------------------------------------------*/
+.avisos {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
+}
+.popup-save {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-check {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-edit {
+  background-color: rgba(221, 199, 0, 0.5);
+  color: rgb(161, 119, 11);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-del {
+  background-color: rgba(173, 24, 24, 0.5);
+  color: rgb(173, 24, 24);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+/* --------------------------------------------------------------------*/
+/* -------------->>> CONTEUDO DE MOBILE (DISPLAY NONE) <<<-------------*/
+/* --------------------------------------------------------------------*/
 .head-screen {
   display: none;
 }
-/*Responsivo*/
+.pesquisar {
+  display: none;
+}
+/* --------------------------------------------------------------------*/
+/* --------------------->>> KEYFRAMES DE ANIMAÇÃO <<<------------------*/
+/* --------------------------------------------------------------------*/
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* --------------------------------------------------------------------*/
+/* -------------------------->>> RESPONSIVO <<<------------------------*/
+/* --------------------------------------------------------------------*/
 @media only screen and (max-device-width: 900px) {
+  /* --------------------------------------------------------------------*/
+  /* ---------------------->>> NAVBAR RESPONSIVA <<<---------------------*/
+  /* --------------------------------------------------------------------*/
   .head-screen {
-background-color: #035e4b;
-color: white;
-width: 100%;
-height: 30%;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 5px;
-  }
-
-  .head-screen i {
-   margin: 10px;
-   font-size: 30px;
-  }
-  .head{
-display: none;
-  }
-  /*Configurações*/
-  .config {
+    background-color: #009879;
+    border-bottom: 5px solid #035e4b;
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 40px;
-    margin-top: 1px;
+    padding: 5px;
   }
+  .btn-head {
+    background-color: white;
+    border-bottom: 4px solid rgb(207, 207, 207);
+    border-right: 4px solid rgb(207, 207, 207);
+    margin: 10px;
+    border-radius: 5px;
+    color: #035e4b;
+  }
+  .head-screen i {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .btn-head:hover {
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+  }
+  .btn-head:focus {
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+  }
+  /* --------------------------------------------------------------------*/
+  /* --------------------------->>> PESQUISAR <<<------------------------*/
+  /* --------------------------------------------------------------------*/
+  .pesquisar {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+  }
+  .search {
+    color: rgb(118, 118, 118);
+    border-radius: 4px;
+    height: 35px;
+    width: 60%;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(206, 206, 206);
+    margin-top: 15px;
+  }
+  .btn-search {
+    border: none;
+    background-color: teal;
+    color: white;
+    height: 35px;
+    width: 40%;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  /* --------------------------------------------------------------------*/
+  /* ---------------------->>> CONTEUDO PRINCIPAL <<<--------------------*/
+  /* --------------------------------------------------------------------*/
   .container {
     display: flex;
     flex-direction: column;
@@ -608,9 +664,56 @@ display: none;
     align-items: center;
     margin-top: 5px;
   }
-  .agendar {
+  .registro {
     width: 350px;
-    margin-top: 395px;
+  }
+/* --------------------------------------------------------------------*/
+/* ------------------------>>> TABELA DE DADOS <<<---------------------*/
+/* --------------------------------------------------------------------*/
+  .tabela {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+  }
+  .content-table {
+    width: 100%;
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+    overflow-x: scroll;
+  }
+  .btn-table {
+    display: flex;
+    flex-direction: row;
+  }
+  .btn-check {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .btn-edit {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .btn-del {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+/* --------------------------------------------------------------------*/
+/* ------------->>> CONTEUDO DE DESKTOP (DISPLAY NONE) <<<-------------*/
+/* --------------------------------------------------------------------*/
+  .head {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .agendar {
     display: none;
   }
   .agenda {
@@ -618,20 +721,5 @@ display: none;
   }
   .historico {
     display: none;
-  }
-  .registro {
-    width: 350px;
-    margin-top: 5px;
-  }
-  .tabela {
-    max-width: 350px;
-    min-height: 530px;
-    max-height: 530px;
-  }
-  .content-table {
-    max-width: 350px;
-    min-height: 530px;
-    max-height: 530px;
- 
   }
 }

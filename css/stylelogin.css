@@ -1,7 +1,16 @@
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
 * {
   margin: 0;
   padding: 0;
 }
+a:link {
+  text-decoration: none;
+}
+/* ---------------------------------------*/
+/* ---------->>> BACKGROUND <<<-----------*/
+/* ---------------------------------------*/
 body {
   background-image: url(../img/bglogin.jpg);
   display: flex;
@@ -11,6 +20,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+/* ----------------------------------------------*/
+/* ---------->>> DIVISÃO PRINCIPAL <<<-----------*/
+/* ----------------------------------------------*/
 .container {
   display: flex;
   flex-direction: column;
@@ -68,10 +80,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
-.info:focus {
-  background-color: white;
-  border: 2px solid rgb(31, 31, 31);
-}
 .link {
   color: rgb(150, 150, 150);
   font-weight: 600;
@@ -81,7 +89,6 @@ body {
 .help {
   margin-top: 35px;
 }
-/*Hover*/
 .btn:hover {
   border-bottom: 4px solid #046e59;
   cursor: pointer;
@@ -89,23 +96,27 @@ body {
 .link:hover {
   color: rgb(117, 117, 117);
 }
-/*Active*/
 .btn:active {
   border: none;
   cursor: pointer;
 }
-/*Remover o efeito de link*/
-a:link {
-  text-decoration: none;
+.info:focus {
+  background-color: white;
+  border: 2px solid rgb(31, 31, 31);
 }
-/*Responsivo*/
+/* --------------------------------------------------------------------*/
+/* -------------------------->>> RESPONSIVO <<<------------------------*/
+/* --------------------------------------------------------------------*/
 @media only screen and (max-device-width: 900px) {
+/* ----------------------------------------------*/
+/* ---------->>> DIVISÃO PRINCIPAL <<<-----------*/
+/* ----------------------------------------------*/
   .container {
     width: 300px;
     height: 500px;
     margin: 20px;
   }
   .container h1 {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
